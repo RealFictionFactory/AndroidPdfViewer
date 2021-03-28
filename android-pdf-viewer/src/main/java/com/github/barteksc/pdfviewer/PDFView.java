@@ -462,8 +462,7 @@ public class PDFView extends RelativeLayout {
         animationManager.computeFling();
     }
 
-    @Override
-    protected void onDetachedFromWindow() {
+    public void destroy() {
         recycle();
         if (renderingHandlerThread != null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
@@ -473,7 +472,6 @@ public class PDFView extends RelativeLayout {
             }
             renderingHandlerThread = null;
         }
-        super.onDetachedFromWindow();
     }
 
     @Override
