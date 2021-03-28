@@ -223,4 +223,10 @@ public class PDFViewActivity extends AppCompatActivity implements OnPageChangeLi
     public void onPageError(int page, Throwable t) {
         Log.e(TAG, "Cannot load page " + page);
     }
+
+    @Override
+    protected void onDestroy() {
+        pdfView.destroy();
+        super.onDestroy();
+    }
 }
