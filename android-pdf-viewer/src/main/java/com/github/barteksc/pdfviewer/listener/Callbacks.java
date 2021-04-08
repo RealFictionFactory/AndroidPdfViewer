@@ -70,6 +70,11 @@ public class Callbacks {
     private OnLongPressListener onLongPressListener;
 
     /**
+     * Callback object to call when user does tap down gesture
+     */
+    private OnTouchDownListener onTouchDownListener;
+
+    /**
      * Call back object to call when clicking link
      */
     private LinkHandler linkHandler;
@@ -160,6 +165,15 @@ public class Callbacks {
 
     public void setOnLongPress(OnLongPressListener onLongPressListener) {
         this.onLongPressListener = onLongPressListener;
+    }
+
+    public void setOnTouchDown(OnTouchDownListener onTouchDownListener) {
+        this.onTouchDownListener = onTouchDownListener;
+    }
+
+    public void callOnTouchDown() {
+        if (onTouchDownListener != null)
+            onTouchDownListener.onTouchDown();
     }
 
     public void callOnLongPress(MotionEvent event) {
