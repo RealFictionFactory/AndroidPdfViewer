@@ -85,6 +85,7 @@ pdfView.fromAsset(String)
     // called on single tap, return true if handled, false to toggle scroll handle visibility
     .onTap(onTapListener)
     .onLongPress(onLongPressListener)
+    .onTouchDown(onTouchDownListener) // if you need additional initialization when user taps down
     .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
     .password(null)
     .scrollHandle(null)
