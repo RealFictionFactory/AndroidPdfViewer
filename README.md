@@ -21,12 +21,13 @@ Licensed under Apache License 2.0.
 
 Add to _build.gradle_:
 
-`allprojects {
+```allprojects {
     repositories {
         ...
         maven { url 'https://jitpack.io' }
     }
-}`
+}
+```
 
 and:
 
