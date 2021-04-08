@@ -4,6 +4,9 @@ Library for displaying PDF documents on Android, with `animations`, `gestures`, 
 It is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for decoding PDF files. Works on API 11 (Android 3.0) and higher.
 Licensed under Apache License 2.0.
 
+## What's new in 3.2.0-b3 (2021-04-08)
+* Add onTouchDown callback (required for additional initialization for one of the projects using it)
+
 ## What's new in 3.2.0-b2 (2021-03-28)
 * Add destroy method instead of onDetachFromWindow which breaks ability to correctly work with ViewPager2
 
@@ -27,7 +30,7 @@ Add to _build.gradle_:
 
 and:
 
-`implementation 'com.github.RealFictionFactory:AndroidPdfViewer:develop-SNAPSHOT'`
+`implementation 'com.github.RealFictionFactory:AndroidPdfViewer:3.2.0-b3'`
 
 or if you want to use more stable version go to original [repository](https://github.com/barteksc/AndroidPdfViewer)
  

@@ -1,3 +1,6 @@
+## 3.2.0-b3 (2021-04-08)
+* Add onTouchDown callback (required for additional initialization for one of the projects using it)
+
 ## 3.2.0-b2 (2021-03-28)
 * Add destroy method instead of onDetachFromWindow which breaks ability to correctly work with ViewPager2
 
