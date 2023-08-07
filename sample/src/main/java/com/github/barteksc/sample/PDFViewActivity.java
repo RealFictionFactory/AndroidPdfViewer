@@ -177,23 +177,22 @@ public class PDFViewActivity extends AppCompatActivity implements OnPageChangeLi
     @Override
     public void loadComplete(int nbPages) {
         PdfDocument.Meta meta = binding.pdfView.getDocumentMeta();
-        Log.e(TAG, "title = " + meta.getTitle());
-        Log.e(TAG, "author = " + meta.getAuthor());
-        Log.e(TAG, "subject = " + meta.getSubject());
-        Log.e(TAG, "keywords = " + meta.getKeywords());
-        Log.e(TAG, "creator = " + meta.getCreator());
-        Log.e(TAG, "producer = " + meta.getProducer());
-        Log.e(TAG, "creationDate = " + meta.getCreationDate());
-        Log.e(TAG, "modDate = " + meta.getModDate());
+        Log.i(TAG, "title = " + meta.getTitle());
+        Log.i(TAG, "author = " + meta.getAuthor());
+        Log.i(TAG, "subject = " + meta.getSubject());
+        Log.i(TAG, "keywords = " + meta.getKeywords());
+        Log.i(TAG, "creator = " + meta.getCreator());
+        Log.i(TAG, "producer = " + meta.getProducer());
+        Log.i(TAG, "creationDate = " + meta.getCreationDate());
+        Log.i(TAG, "modDate = " + meta.getModDate());
 
         printBookmarksTree(binding.pdfView.getTableOfContents(), "-");
-
     }
 
     public void printBookmarksTree(List<PdfDocument.Bookmark> tree, String sep) {
         for (PdfDocument.Bookmark b : tree) {
 
-            Log.e(TAG, String.format("%s %s, p %d", sep, b.getTitle(), b.getPageIdx()));
+            Log.i(TAG, String.format("%s %s, p %d", sep, b.getTitle(), b.getPageIdx()));
 
             if (b.hasChildren()) {
                 printBookmarksTree(b.getChildren(), sep + "-");
@@ -209,7 +208,7 @@ public class PDFViewActivity extends AppCompatActivity implements OnPageChangeLi
      * @param grantResults Whether permissions granted
      */
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[],
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
