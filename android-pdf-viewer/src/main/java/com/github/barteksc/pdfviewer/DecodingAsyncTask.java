@@ -18,11 +18,12 @@ package com.github.barteksc.pdfviewer;
 import android.os.AsyncTask;
 
 import com.github.barteksc.pdfviewer.source.DocumentSource;
-import com.shockwave.pdfium.PdfDocument;
-import com.shockwave.pdfium.PdfiumCore;
-import com.shockwave.pdfium.util.Size;
 
 import java.lang.ref.WeakReference;
+
+import io.legere.pdfiumandroid.PdfDocument;
+import io.legere.pdfiumandroid.PdfiumCore;
+import io.legere.pdfiumandroid.util.Size;
 
 class DecodingAsyncTask extends AsyncTask<Void, Void, Throwable> {
 

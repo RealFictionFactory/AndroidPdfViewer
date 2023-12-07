@@ -42,9 +42,10 @@ import com.github.barteksc.pdfviewer.listener.OnPageErrorListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
 import com.github.barteksc.sample.databinding.ActivityMainBinding;
-import com.shockwave.pdfium.PdfDocument;
 
 import java.util.List;
+
+import io.legere.pdfiumandroid.PdfDocument;
 
 public class PDFViewActivity
         extends AppCompatActivity
@@ -222,7 +223,7 @@ public class PDFViewActivity
 
             Log.e(TAG, String.format("%s %s, p %d", sep, b.getTitle(), b.getPageIdx()));
 
-            if (b.hasChildren()) {
+            if (b.getChildren().size() > 0) {
                 printBookmarksTree(b.getChildren(), sep + "-");
             }
         }

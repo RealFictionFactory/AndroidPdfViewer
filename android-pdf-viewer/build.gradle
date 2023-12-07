@@ -11,7 +11,7 @@ android {
 }
 
 dependencies {
-    api 'com.github.barteksc:pdfium-android:1.9.0'
+    api "io.legere:pdfiumandroid:1.0.15"
     implementation "androidx.annotation:annotation:1.2.0"
     implementation 'androidx.appcompat:appcompat:1.6.1'
 }
