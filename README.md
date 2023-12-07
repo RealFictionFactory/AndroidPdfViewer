@@ -1,9 +1,12 @@
 # This is my fork of Android PdfViewer which seems not supported anymore and still having some issues
 
 Library for displaying PDF documents on Android, with `animations`, `gestures`, `zoom` and `double tap` support.
-It is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for decoding PDF files. Works on API 11 (Android 3.0) and higher.
+It was based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for decoding PDF files but recently I've migrated to [PdfiumAndroidKt](https://github.com/johngray1965/PdfiumAndroidKt). Works on API 21 and higher.
 Licensed under Apache License 2.0.
 
+## What's new in 4.0.0-alpha1 (2023-12-07)
+* First release with new PdfiumAndroidKt dependency
+  
 ## What's new in 3.2.0-b2 (2021-03-28)
 * Add destroy method instead of onDetachFromWindow which breaks ability to correctly work with ViewPager2
 
